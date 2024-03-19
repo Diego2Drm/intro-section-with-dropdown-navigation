@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <img src="./images/logo.svg" alt="logo">
+      <img class="icon-menu" src="./images/icon-menu.svg" alt="icon-menu">
+
+      <section class="modal inactive">
+        <div class="nav__bar">
+          <figure class="icon-close-menu-content">
+            <img class="icon-close-menu" src="./images/icon-close-menu.svg" alt="icon-close-menu">
+          </figure>
+
+          <ul class="nav__bar--list">
+            <li>
+              <span class="sub--title">
+                Features <img class="icon-arrow-down" src="./images/icon-arrow-down.svg" alt="icon-arrow-down">
+              </span>
+
+              <ul class="sub--list inactive left">
+                <li>
+                  <img src="./images/icon-todo.svg" alt="icon-todo">
+                  <span>Todo List</span>
+                </li>
+                <li>
+                  <img src="./images/icon-calendar.svg" alt="icon-calendar">
+                  <span>Calender</span>
+                </li>
+                <li>
+                  <img src="./images/icon-reminders.svg" alt="icon-reminders">
+                  <span>Reminders</span>
+                </li>
+                <li>
+                  <img src="./images/icon-planning.svg" alt="icon-planning">
+                  <span>Planning</span>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <span class="sub--title">
+                Company <img class="icon-arrow-down " src="./images/icon-arrow-down.svg" alt="icon-arrow-down">
+
+              </span>
+              <ul class="sub--list inactive">
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+
+            </li>
+
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+
+          <div class="btn__content">
+            <a href="#"">Login</a>
+            <a href=" #"">Register</a>
+          </div>
+
+        </div>
+      </section>
+    </nav>
+  </header>
+
+<section class="container__grid">
+    <main>
+      <img class="img--mobile" src="./images/image-hero-mobile.png" alt="">
+      <img class="img-desktop" src="./images/image-hero-desktop.png" alt="image-hero-desktop">
+      <div class="main__info">
+        <h1>Make <br> remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. <br> Streamline processes,
+          create team rituals, and <br> watch productivity soar.
+        </p>
+        <a href="#"> Learn more
+        </a>
+      </div>
+    </main>
+    <footer>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      
+    </footer>
+</section>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Diego Ramírez</a>.
+  </div>
+
+
+  <script>
+    const iconMenu = document.querySelector('.icon-menu');
+    const modal = document.querySelector('.modal');
+    const iconClose = document.querySelector('.icon-close-menu');
+    const subTitle = document.querySelectorAll('.sub--title');
+    
+
+    iconMenu.addEventListener('click', () => {
+      modal.classList.toggle('inactive')
+    })
+    iconClose.addEventListener('click', () => {
+      modal.classList.toggle('inactive')
+    })
+
+    subTitle.forEach(title => 
+    title.addEventListener('click', () =>{
+      title.nextElementSibling.classList.toggle('inactive');
+      title.lastElementChild.classList.toggle('up');
+    })
+    )
+
+  </script>
+</body>
+
+</html>
