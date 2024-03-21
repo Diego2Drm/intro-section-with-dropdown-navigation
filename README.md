@@ -1,6 +1,6 @@
 # Frontend Mentor - Intro section with dropdown navigation
 
-- My Solution URL: [intro-section-with-dropdown-navigation](https://github.com/Diego2Drm/intro-section-with-dropdown-navigation)
+- My Solution URL: [Live Site](https://diego2drm.github.io/intro-section-with-dropdown-navigation/)
 
 ![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)
 
